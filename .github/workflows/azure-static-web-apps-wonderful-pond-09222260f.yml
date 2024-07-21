@@ -34,4 +34,4 @@ jobs:
         action: "upload"
         app_location: "/"
         api_location: ""
-        output_location: "./code-hub/dist/<nombre-de-tu-app>"  # Ajusta esto si tu directorio de salida es diferente
+        output_location: "./code-hub/dist/code-hub"
