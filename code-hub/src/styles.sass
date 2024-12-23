@@ -1,17 +1,145 @@
+/* Global styles */
+@import '@fortawesome/fontawesome-free/css/all.min.css'
+
 *,
 *::before,
-*::after 
+*::after
   box-sizing: border-box
 
 html,
-body 
+body
   margin: 0
   padding: 0
   width: 100%
   height: 100%
 
-body 
+body
   display: flex
   justify-content: center
   align-items: center
   background-color: #000
+
+:root
+  --bg-primary: #0a192f
+  --text-primary: #ccd6f6
+  --text-secondary: #8892b0
+  --accent: #64ffda
+  --sidebar-width: 40vw
+
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  font-family: 'Inter', sans-serif
+  background-color: var(--bg-primary)
+  color: var(--text-primary)
+  line-height: 1.6
+  overflow: hidden
+
+
+/* Layout */
+.container
+  display: flex
+  height: 100vh
+
+/* Sections */
+.section
+  min-height: 100vh
+
+  padding: 4rem 2rem
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+
+.section-title
+  font-size: 3rem
+  color: var(--accent)
+  margin-bottom: 2re
+
+/* Experience Section */
+.experience-timeline
+  max-width: 800px
+  margin: 0 auto
+  padding-left: 2rem
+
+.experience-item
+  margin-bottom: 3rem
+  position: relative
+
+.experience-item::before
+  content: ''
+  position: absolute
+  left: -2rem
+  top: 0
+  width: 1px
+  height: 100%
+  background-color: var(--text-secondary)
+
+
+.experience-item::after
+  content: ''
+  position: absolute
+  left: -2.35rem
+  top: 0.5rem
+  width: 0.5rem
+  height: 0.75em
+  border-radius: 50%
+  background-color: var(--accent)
+
+.company-period
+  color: var(-text-secondary)
+  margin: 0.5rem 0
+
+
+.achievements
+  list-style: none
+  margin-top: 1rm
+
+
+.achievements li
+  position: relative
+  padding-left: 1.0rem
+  margin-bottom: 0.5rem
+
+.achievements li::before
+  content: '▹'
+  position: absolute
+  left: 0
+  color: var(--accent)
+
+/* Scrollbar Styles */
+::-webkit-scrollbar
+  width: 8px
+
+::-webkit-scrollbar-track
+  background: var(--bg-primary)
+
+
+::-webkit-scrollbar-thumb
+  background: var(--accent)
+  border-radius: 4px
+
+
+/* Responsive Design */
+@media (max-width: 1024px)
+:root
+  --idebar-width: 250px
+
+
+.profile-image
+  width: 12px
+  height: 12px
+
+
+.sidebar-header h1
+  font-size: 1.75rem
+
+
+.section
+  padding: 3rem 1.5rem
+
+
