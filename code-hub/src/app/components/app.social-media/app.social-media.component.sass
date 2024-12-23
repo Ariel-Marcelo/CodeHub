@@ -1,0 +1,89 @@
+/* Sidebar Styles */
+.sidebar
+  width: var(--sidebar-width)
+  height: 100vh
+  padding: 2rem
+  left: 0
+  background-color: var(--bg-primary)
+  border-right: 1px solid rgba(255, 255, 255, 0.1)
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+
+.sidebar-header
+  text-align: left
+
+.sidebar-header h1
+  font-size: 2rem
+  color: var(--accent)
+  margin-bottom: 0.5rem
+
+.sidebar-header p
+  color: var(--text-secondary)
+  font-size: 1.1rem
+  margin-bottom: 1.5rem
+
+/* Profile*/
+.profile-section
+  margin-bottom: 2rem
+
+.profile-image
+  width: 150px
+  height: 150px
+  border-radius: 50%
+  margin-bottom: 1.5rem
+  border: 2px solid var(--accent)
+  object-fit: cover
+
+/* Social Links */
+.social-links
+  display: flex
+  gap: 1.5rem
+  margin: 1.5rem 0
+
+.social-links a
+  color: var(--text-primary)
+  font-size: 1.5rem
+  transition: color 0.3s ease
+
+.social-links a:hover
+  color: var(--accent)
+
+/* Navigation */
+.nav-links
+  margin-top: 2rem
+
+
+.nav-item
+  display: flex
+  align-items: center
+  padding: 1rem 0
+  cursor: pointer
+  position: relative
+
+
+.nav-item a
+  color: var(--text-primary)
+  text-decoration: none
+  font-size: 1.1rem
+  transition: color 0.3s ease
+  padding-left: 1rem
+
+
+.nav-item::before
+  content: ''
+  position: absolute
+  left: -0.5rem
+  width: 3px
+  height: 0
+  background-color: var(--accent)
+  transition: height 0.3s ease
+
+
+.nav-item.active::before
+  height: 100%
+
+
+.nav-item:hover a
+  color: var(--accent)
